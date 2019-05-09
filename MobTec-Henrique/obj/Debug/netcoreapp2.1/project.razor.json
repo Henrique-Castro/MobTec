@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\46885473820\\Documents\\gitHub\\tecDev-senaiProjects\\MobTec\\MobTec.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
