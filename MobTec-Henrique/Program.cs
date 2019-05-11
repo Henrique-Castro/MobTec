@@ -1,29 +1,37 @@
 ﻿using System;
+using MobTec.Controller;
 using MobTec.Util;
 
-namespace MobTec
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace MobTec {
+    class Program {
+        static void Main (string[] args) {
+            bool sair = false;
             #region Usuário
 
             #endregion
 
-            int codigo = MenuUtil.MostrarMenuTransacoes();
-            switch (codigo)
-            {
-                case 1:
-                    //Cadastrar transação
-                break;
-                case 2:
-                    //Ver todas as transações
-                break;
-                default:
-                break;
-                
-            }
+            do {
+                int codigo = MenuUtil.MostrarMenuTransacoes ();
+                switch (codigo) {
+                    case 1:
+                        //Cadastrar transação
+                        ControllerTransacao.CadastrarTransacao ();
+                        break;
+                    case 2:
+                        //Ver todas as transações
+                        ControllerTransacao.ListarTransacoes ();
+                        break;
+                    case 3:
+                        ControllerTransacao.ComprimirExtrato();
+                    break;    
+                    case 0:
+                        sair = true;
+                        break;
+
+                    default:
+                        break;
+                }
+            } while (sair == false);
         }
     }
 }

@@ -13,6 +13,8 @@ namespace MobTec.Util
                 "                                       ",
                 "       1- Nova transação               ",
                 "       2- Extrato de transações        ",
+                "       3- Comprimir extrato            ",
+                "       0- Voltar                       ",
                 "_______________________________________"
             };
             foreach(string linha in menu){

@@ -18,6 +18,12 @@ namespace MobTec.Model
             Valor = valor;
             Data = DateTime.Now;
         }
+        public ModelTransacao(string tipo, string descricao, DateTime data, float valor){
+            Tipo = tipo;
+            Descricao = descricao;
+            Valor = valor;
+            Data = data;
+        }
         
         public bool Creditar(float valor)
         {

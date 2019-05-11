@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\bin\Debug\netcoreapp2.1\MobTec.deps.json
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\bin\Debug\netcoreapp2.1\MobTec.runtimeconfig.json
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\bin\Debug\netcoreapp2.1\MobTec.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\bin\Debug\netcoreapp2.1\MobTec.dll
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\bin\Debug\netcoreapp2.1\MobTec.pdb
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\obj\Debug\netcoreapp2.1\MobTec.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\obj\Debug\netcoreapp2.1\MobTec.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\obj\Debug\netcoreapp2.1\MobTec.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\obj\Debug\netcoreapp2.1\MobTec.AssemblyInfo.cs
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\obj\Debug\netcoreapp2.1\MobTec.dll
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Henrique\obj\Debug\netcoreapp2.1\MobTec.pdb

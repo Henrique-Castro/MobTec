@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46885473820\\Documents\\gitHub\\tecDev-senaiProjects\\MobTec\\MobTec.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\gitHub\\MobTec\\MobTec-Henrique\\MobTec.csproj",
       "projectName": "MobTec",
-      "projectPath": "C:\\Users\\46885473820\\Documents\\gitHub\\tecDev-senaiProjects\\MobTec\\MobTec.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\gitHub\\MobTec\\MobTec-Henrique\\MobTec.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46885473820\\Documents\\gitHub\\tecDev-senaiProjects\\MobTec\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\gitHub\\MobTec\\MobTec-Henrique\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
