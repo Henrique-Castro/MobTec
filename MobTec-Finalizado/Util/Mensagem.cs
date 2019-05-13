@@ -14,6 +14,9 @@ namespace MobTec_Finalizado.Util {
                 case TipoMensagemEnum.SUCESSO:
                     Console.ForegroundColor = ConsoleColor.Green;
                     break;
+                case TipoMensagemEnum.DESTAQUE:
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                break;
             }
             System.Console.WriteLine (mensagem);
             Console.ResetColor ();

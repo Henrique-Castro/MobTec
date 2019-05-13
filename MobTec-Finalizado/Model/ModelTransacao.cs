@@ -2,16 +2,16 @@ using System;
 
 namespace MobTec_Finalizado.Model
 {
-    public class ModelTransacao
+    public class ModelTransacao : ModelBase
     {
         public string Tipo, Descricao;
-        public DateTime Data;
         public float Valor;
 
         public ModelTransacao(){
 
         }
-        public ModelTransacao(string tipo, string descricao, float valor){
+        public ModelTransacao(int idUsuario,string tipo, string descricao, float valor){
+            IdUsuario = idUsuario;
             Tipo = tipo;
             Descricao = descricao;
             Valor = valor;
@@ -22,18 +22,6 @@ namespace MobTec_Finalizado.Model
             Descricao = descricao;
             Valor = valor;
             Data = data;
-        }
-        
-        public bool Creditar(float valor)
-        {
-            System.Console.WriteLine($"Você recebeu R${valor}.");
-            return true;
-        }
-
-        public bool Debitar(float valor)
-        {
-            System.Console.WriteLine($"Você gastou R${valor}.");
-            return true;
         }
     }
 }

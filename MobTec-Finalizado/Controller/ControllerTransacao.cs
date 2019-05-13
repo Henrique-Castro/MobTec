@@ -10,7 +10,7 @@ namespace MobTec_Finalizado.Controller
 {
     public class ControllerTransacao
     {
-        public static void CadastrarTransacao () {
+        public static void CadastrarTransacao (ModelUsuario usuarioLogado) {
             RepositorioTransacao repositorio = new RepositorioTransacao ();
             string tipo, descricao;
             float valor;
@@ -35,11 +35,11 @@ namespace MobTec_Finalizado.Controller
                     Mensagem.MostrarMensagem ("Este campo não pode ficar vazio.", TipoMensagemEnum.ALERTA);
                 }
             } while (!ValidacaoUtil.ValidarPreco (valor));
-            ModelTransacao transacao = new ModelTransacao(tipo,descricao,valor);
+            ModelTransacao transacao = new ModelTransacao(usuarioLogado.IdUsuario,tipo,descricao,valor);
             repositorio.GravarTransacao (transacao);
             Mensagem.MostrarMensagem ("Transação registrada com sucesso.", TipoMensagemEnum.SUCESSO);
         }
-        public static void ListarTransacoes(){
+        public static void ListarTransacoes(ModelUsuario usuarioLogado){
             RepositorioTransacao repositorio = new RepositorioTransacao();
             List<ModelTransacao> listaRetornada = repositorio.Listar();
             if(listaRetornada == null){

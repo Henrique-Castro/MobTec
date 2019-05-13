@@ -4,6 +4,7 @@ namespace MobTec_Finalizado.Util.EnumUtil
     {
         ALERTA,
         SUCESSO,
-        ERRO
+        ERRO,
+        DESTAQUE
     }
 }

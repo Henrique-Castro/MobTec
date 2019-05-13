@@ -18,7 +18,7 @@ namespace MobTec_Finalizado.Repositorio
             sw.Close ();
 
         }
-        public List<ModelTransacao> Listar () {
+        public List<ModelTransacao> Listar () {//TERMINAR A LIGAÇÃO DO USUÁRIO COM A TRANSAÇÃO ATRAVEZ DO ID
             if (!File.Exists ("transacoes.csv")) {
                 return null;
             } else {

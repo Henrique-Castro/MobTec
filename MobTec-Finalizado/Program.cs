@@ -3,18 +3,17 @@ using Microsoft.VisualBasic.CompilerServices;
 using Mobtec.Util;
 using MobTec_Finalizado.Controller;
 using MobTec_Finalizado.Model;
+using MobTec_Finalizado.Util;
+using MobTec_Finalizado.Util.EnumUtil;
 
 namespace MobTec_Finalizado {
     class Program {
         static void Main (string[] args) {
-            #region Usuario
+
             bool sair = false;
             bool voltar = false;
             do {
-                MenuUtil.MenuDeslogado ();
-                System.Console.Write ("Digite o número da opçâo : ");
-                int opcaoDeslogado = int.Parse (Console.ReadLine ());
-                System.Console.WriteLine (" ");
+                int opcaoDeslogado = MenuUtil.MenuDeslogado ();
 
                 switch (opcaoDeslogado) {
                     case 1:
@@ -23,85 +22,49 @@ namespace MobTec_Finalizado {
                     case 2:
                         ModelUsuario usuarioRecuperado = ControllerUsuario.EfetuarLogin ();
                         if (usuarioRecuperado != null) {
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            System.Console.WriteLine ($" \nBem-Vindo {usuarioRecuperado.Nome}\n ");
-                            Console.ResetColor ();
+                            Mensagem.MostrarMensagem ($"Bem-Vindo {usuarioRecuperado.Nome}\n ", TipoMensagemEnum.SUCESSO);
+                            //Menu Logado (Transações)
                             do {
-                                int opcaoLogado;
-                                MenuUtil.MenuLogado ();
-                                System.Console.Write ("Digite o número da opção : ");
-                                opcaoLogado = int.Parse (Console.ReadLine ());
+                                int opcaoLogado = MenuUtil.MenuLogado ();
                                 switch (opcaoLogado) {
                                     case 1:
-                                        ControllerTransacao.CadastrarTransacao ();
+                                        ControllerTransacao.CadastrarTransacao (usuarioRecuperado);
                                         break;
                                     case 2:
-                                        ControllerTransacao.ListarTransacoes ();
+                                        ControllerTransacao.ListarTransacoes (usuarioRecuperado);
                                         break;
                                     case 3:
                                         ControllerTransacao.ComprimirExtrato ();
                                         break;
-                                    case 4: //VEr Saldo
-                                        if (usuarioRecuperado.Saldo >= 0) {
-                                            Console.ForegroundColor = ConsoleColor.Green;
-                                            System.Console.WriteLine ($"Saldo Atual : {usuarioRecuperado.Saldo}");
-                                            Console.ResetColor ();
-                                        } else {
-                                            Console.ForegroundColor = ConsoleColor.Red;
-                                            System.Console.WriteLine ($"Saldo Atual : {usuarioRecuperado.Saldo}");
-                                            Console.ResetColor ();
-                                        }
+                                    case 4:
+                                        ControllerUsuario.VerSaldo (usuarioRecuperado);
                                         break;
                                     case 5:
                                         ControllerTransacao.GerarRelatorioTransacoes ();
                                         break;
                                     case 0:
-                                        return;
+                                        voltar = true;
+                                        break;
                                     default:
-                                        System.Console.WriteLine ("Opção Invalida");
+                                        Mensagem.MostrarMensagem ("Opção inválida", TipoMensagemEnum.ERRO);
+                                        Console.ReadLine();
                                         continue;
                                 }
-
                             } while (voltar == false);
                         }
                         break;
+                        //FIM DO CASO 2 (EFETUAR LOGIN)
+                    case 0:
+                        sair = true;
+                        break;
                     default:
-                        System.Console.WriteLine ("Opção Inválida");
+                        Mensagem.MostrarMensagem ("Opção inválida", TipoMensagemEnum.ERRO);
+                        Console.ReadLine();
+                        
                         continue;
                 }
 
-                #endregion
-
-                //     #region Transação
-
-                //     do {
-                //         int codigo = MenuUtil.MenuLogado ();
-                //         switch (codigo) {
-                //             case 1:
-                //                 //Cadastrar transação
-                //                 ControllerTransacao.CadastrarTransacao ();
-                //                 break;
-                //             case 2:
-                //                 //Ver todas as transações
-                //                 ControllerTransacao.ListarTransacoes ();
-                //                 break;
-                //             case 3:
-                //                 ControllerTransacao.ComprimirExtrato ();
-                //                 break;
-                //             case 4:
-                //                 ControllerTransacao.GerarRelatorioTransacoes ();
-                //                 break;
-                //             case 0:
-                //                 sair = true;
-                //                 break;
-
-                //             default:
-                //                 break;
-                //         }
-                //     } while (sair == false);
-                //     #endregion
             } while (sair == false);
-
         }
     }
 }
