@@ -4,6 +4,10 @@ using System.IO;
 using System.IO.Compression;
 using System.IO.Packaging;
 using MobTec.Model;
+using Ionic.Zip;
+using SautinSoft.Document;
+using SautinSoft.Document.Tables;
+
 namespace MobTec_Henrique.Repository {
     public class RepositoryTransacao {
         List<ModelTransacao> ListaDeTransacoes = new List<ModelTransacao> ();
@@ -30,15 +34,31 @@ namespace MobTec_Henrique.Repository {
             }
         }
         public void Comprimir () {
-            FileStream arquivoFonte = File.OpenRead("transacoes.csv");
-            FileStream arquivoDestino = File.Create("banco_de_dados" + ".zip");
-            byte[] buffer = new byte[arquivoFonte.Length]; //https://stackoverflow.com/questions/11153542/how-to-compress-files
-            arquivoFonte.Read(buffer, 0, buffer.Length);
+            using(Ionic.Zip.ZipFile zip = new Ionic.Zip.ZipFile()){
+                zip.AddFile("transacoes.csv");
+                zip.Save("banco_de_dados.zip");
+            }
+        }
+        public void GerarRelatorio(){
+            var docx = new DocumentCore();
+            var section = new Section(docx);
 
-            GZipStream gZipStream = new GZipStream(arquivoDestino, CompressionMode.Compress);
+            docx.Sections.Add(section);
 
-            arquivoFonte.Close();
-            arquivoDestino.Close();
+            var table = new Table(docx);
+
+            string[] listaNaoTratada = File.ReadAllLines ("transacoes.csv");
+            foreach (var transacao in Listar())
+            {
+                if(transacao != null){
+                    var linha = new TableRow(docx);
+                    
+                    foreach (var dado in transacao.Split(";"))
+                    {
+                        
+                    }
+                }
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ namespace MobTec {
             #region Usuário
 
             #endregion
-
+            #region Transação
             do {
                 int codigo = MenuUtil.MostrarMenuTransacoes ();
                 switch (codigo) {
@@ -33,5 +33,6 @@ namespace MobTec {
                 }
             } while (sair == false);
         }
+            #endregion
     }
 }
