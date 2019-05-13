@@ -23,7 +23,10 @@ namespace MobTec {
                         break;
                     case 3:
                         ControllerTransacao.ComprimirExtrato();
-                    break;    
+                    break; 
+                    case 4:
+                        ControllerTransacao.GerarRelatorioTransacoes();
+                    break;   
                     case 0:
                         sair = true;
                         break;

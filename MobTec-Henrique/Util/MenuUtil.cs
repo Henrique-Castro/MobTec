@@ -14,6 +14,7 @@ namespace MobTec.Util
                 "       1- Nova transação               ",
                 "       2- Extrato de transações        ",
                 "       3- Comprimir extrato            ",
+                "       4- Gerar relatório              ",
                 "       0- Voltar                       ",
                 "_______________________________________"
             };

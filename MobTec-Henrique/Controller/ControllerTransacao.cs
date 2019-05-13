@@ -58,5 +58,9 @@ namespace MobTec.Controller {
             repository.Comprimir();
             Mensagem.MostrarMensagem("yay", TipoMensagemEnum.SUCESSO);
         }
+        public static void GerarRelatorioTransacoes(){
+            RepositoryTransacao repository = new RepositoryTransacao();
+            repository.GerarRelatorio();
+        }
     }
 }

@@ -1,14 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "78f68e116f81c82d5c1cb5288d84daa04977049b"
+    "signature": "37bb7f429d81eaca42cec0203b9dc5bcf1a06986"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "MobTec/1.0.0": {
         "dependencies": {
-          "DotNetZip": "1.13.2"
+          "DotNetZip": "1.13.2",
+          "Spire.Doc": "7.5.1"
         },
         "runtime": {
           "MobTec.dll": {}
@@ -24,6 +25,67 @@
           "lib/netstandard2.0/DotNetZip.dll": {
             "assemblyVersion": "1.13.2.0",
             "fileVersion": "1.13.2.0"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Spire.Doc/7.5.1": {
+        "dependencies": {
+          "System.Drawing.Common": "4.5.0",
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Spire.Doc.dll": {
+            "assemblyVersion": "7.5.1.4320",
+            "fileVersion": "7.5.1.4320"
+          },
+          "lib/netstandard2.0/Spire.License.dll": {
+            "assemblyVersion": "1.3.7.320",
+            "fileVersion": "1.3.7.320"
+          },
+          "lib/netstandard2.0/Spire.Pdf.dll": {
+            "assemblyVersion": "5.5.2.2320",
+            "fileVersion": "5.5.2.2320"
+          }
+        }
+      },
+      "System.Drawing.Common/4.5.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
           }
         }
       },
@@ -114,6 +176,27 @@
       "sha512": "sha512-lG3TY349iJiy1yn00qin7W/qc1uTHBAloyXY66O2JTMYjGR3w4RXhgBYvgQmzHjFoR5942ILt729XHUQNeHmwQ==",
       "path": "dotnetzip/1.13.2",
       "hashPath": "dotnetzip.1.13.2.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K2TAr07pgl/m/J9ed3cmAzx0SD55kYuVfBG6SPRIH/ELTh/D2qGrjOWDQJo7r+LZl1nO2Nkl0UAQBUt6S2ewqQ==",
+      "path": "microsoft.win32.systemevents/4.5.0",
+      "hashPath": "microsoft.win32.systemevents.4.5.0.nupkg.sha512"
+    },
+    "Spire.Doc/7.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ARTe9JorWR47OqEGhycd3je4SEN3nQIRp9H4ekn9QKatY/61lvootn6WwKrCRZPayNEOwkNzACbjCQgV5NT3bg==",
+      "path": "spire.doc/7.5.1",
+      "hashPath": "spire.doc.7.5.1.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uYixYbB0vzxSbc9B7jzwwUA8Upodaj3g2ZNnREWW6zoBw9DltzltcEa1g0I4u6ARqVJ0t4E3yJAWw5h2gvJlhQ==",
+      "path": "system.drawing.common/4.5.0",
+      "hashPath": "system.drawing.common.4.5.0.nupkg.sha512"
     },
     "System.Runtime/4.3.0": {
       "type": "package",
