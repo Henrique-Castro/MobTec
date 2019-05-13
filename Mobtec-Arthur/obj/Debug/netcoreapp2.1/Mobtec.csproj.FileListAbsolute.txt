@@ -1,0 +1,11 @@
+D:\senai\Mobtec\obj\Debug\netcoreapp2.1\Mobtec.csprojAssemblyReference.cache
+D:\senai\Mobtec\obj\Debug\netcoreapp2.1\Mobtec.csproj.CoreCompileInputs.cache
+D:\senai\Mobtec\obj\Debug\netcoreapp2.1\Mobtec.AssemblyInfoInputs.cache
+D:\senai\Mobtec\obj\Debug\netcoreapp2.1\Mobtec.AssemblyInfo.cs
+D:\senai\Mobtec\bin\Debug\netcoreapp2.1\Mobtec.deps.json
+D:\senai\Mobtec\bin\Debug\netcoreapp2.1\Mobtec.runtimeconfig.json
+D:\senai\Mobtec\bin\Debug\netcoreapp2.1\Mobtec.runtimeconfig.dev.json
+D:\senai\Mobtec\bin\Debug\netcoreapp2.1\Mobtec.dll
+D:\senai\Mobtec\bin\Debug\netcoreapp2.1\Mobtec.pdb
+D:\senai\Mobtec\obj\Debug\netcoreapp2.1\Mobtec.dll
+D:\senai\Mobtec\obj\Debug\netcoreapp2.1\Mobtec.pdb
