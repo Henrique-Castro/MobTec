@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\46885473820\\Documents\\gitHub\\MobTec\\MobTec-Finalizado\\MobTec-Finalizado.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

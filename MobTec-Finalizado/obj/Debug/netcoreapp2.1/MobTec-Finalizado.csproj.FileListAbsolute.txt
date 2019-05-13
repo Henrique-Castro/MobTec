@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\bin\Debug\netcoreapp2.1\MobTec-Finalizado.deps.json
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\bin\Debug\netcoreapp2.1\MobTec-Finalizado.runtimeconfig.json
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\bin\Debug\netcoreapp2.1\MobTec-Finalizado.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\bin\Debug\netcoreapp2.1\MobTec-Finalizado.dll
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\bin\Debug\netcoreapp2.1\MobTec-Finalizado.pdb
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\obj\Debug\netcoreapp2.1\MobTec-Finalizado.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\obj\Debug\netcoreapp2.1\MobTec-Finalizado.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\obj\Debug\netcoreapp2.1\MobTec-Finalizado.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\obj\Debug\netcoreapp2.1\MobTec-Finalizado.AssemblyInfo.cs
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\obj\Debug\netcoreapp2.1\MobTec-Finalizado.dll
+C:\Users\46885473820\Documents\gitHub\MobTec\MobTec-Finalizado\obj\Debug\netcoreapp2.1\MobTec-Finalizado.pdb
