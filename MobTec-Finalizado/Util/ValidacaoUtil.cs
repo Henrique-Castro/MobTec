@@ -1,3 +1,4 @@
+using System;
 namespace Mobtec.Utils {
     public class ValidacaoUtil {
         public static bool ValidadorDeEmail (string email) {
@@ -20,5 +21,20 @@ namespace Mobtec.Utils {
                 return false;
             }
         }
+        public static bool ValidarData(string data, out DateTime dateTime){
+            if(DateTime.TryParse(data, out dateTime) == true){
+                DateTime.TryParse(data, out dateTime);
+                return true;
+            }else{
+                return false;
+            }
+        }
+        public static bool ValidarSaldo(string saldoCapturado, string confirmSaldo,out float saldo){
+            if(float.TryParse(saldoCapturado,out saldo) == true && saldoCapturado.Equals(confirmSaldo)){
+                return true;
+            }else{
+                return false;
+            }
+        } 
     }
 }

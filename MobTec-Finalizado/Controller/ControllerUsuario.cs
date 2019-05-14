@@ -11,10 +11,10 @@ namespace MobTec_Finalizado.Controller {
         static RepositorioUsuario usuarioRepositorio = new RepositorioUsuario ();
 
         public static void CadastrarUsuario () {
-            string nome, email, senha, confirmaSenha;
-            DateTime data;
-            int saldo;
-
+            string nome, email, senha, confirmaSenha, dataCapturada, saldoString, confirmSaldoString;
+            DateTime dataDateTime;
+            float saldo;
+            Console.Clear();
             do {
                 Console.Write ("Digite o nome do usuário : ");
                 nome = Console.ReadLine ();
@@ -51,27 +51,42 @@ namespace MobTec_Finalizado.Controller {
                     Console.ResetColor ();
                 }
             } while (!ValidacaoUtil.ValidadorDeSenha (senha, confirmaSenha));
+            do {
+                System.Console.WriteLine ("Digite a sua data de nascimento (dd/mm/aaaa)");
+                dataCapturada = Console.ReadLine ();
+                if (!ValidacaoUtil.ValidarData (dataCapturada, out dataDateTime)) {
+                    Mensagem.MostrarMensagem ("Digite uma data válida.", TipoMensagemEnum.ALERTA);
+                } else {
+                    ValidacaoUtil.ValidarData (dataCapturada, out dataDateTime);
+                }
 
-            System.Console.WriteLine ("Digite a sua data de nascimento (dd/mm/aaaa)");
-            data = DateTime.Parse (Console.ReadLine ());
+            } while (!ValidacaoUtil.ValidarData (dataCapturada, out dataDateTime));
+            do {
+                System.Console.Write ("Digite O Valor Do Seu Saldo Atual : R$");
+                saldoString = Console.ReadLine ();
+                System.Console.Write ("Só para ter certeza, confirme o seu saldo:");
+                confirmSaldoString = Console.ReadLine ();
 
-            System.Console.Write ("Digite O Valor Do Seu Saldo Atual : R$");
-            saldo = int.Parse (Console.ReadLine ());
+                if (!ValidacaoUtil.ValidarSaldo (saldoString, confirmSaldoString, out saldo)) {
+                    Mensagem.MostrarMensagem ("Digite um saldo válido", TipoMensagemEnum.ALERTA);
+                } else {
+                    ValidacaoUtil.ValidarSaldo (saldoString, confirmSaldoString, out saldo);
+                }
+            } while (!ValidacaoUtil.ValidarSaldo (saldoString, confirmSaldoString, out saldo));
 
             ModelUsuario usuario = new ModelUsuario (nome, email, senha, saldo);
             usuarioRepositorio.Inserir (usuario);
 
-            Mensagem.MostrarMensagem("Usuário cadastrado com sucesso.", TipoMensagemEnum.SUCESSO);
-
-            List<ModelUsuario> ListaDeUsuarios = new List<ModelUsuario> ();
-            ListaDeUsuarios.Add (usuario);
+            Mensagem.MostrarMensagem ("Usuário cadastrado com sucesso.", TipoMensagemEnum.SUCESSO);
         } //fim cadastro de usuário
 
         public static ModelUsuario EfetuarLogin () {
             string email, senha;
-
-            System.Console.Write ("Digite seu email : ");
-            email = Console.ReadLine ();
+            Console.Clear();
+            do {
+                System.Console.Write ("Digite seu email : ");
+                email = Console.ReadLine ();
+            } while (ValidacaoUtil.ValidadorDeEmail (email));
 
             System.Console.Write ("Digite sua senha : ");
             senha = Console.ReadLine ();
@@ -81,13 +96,11 @@ namespace MobTec_Finalizado.Controller {
             if (usuarioRecuperado != null) {
                 return usuarioRecuperado;
             }
-            Console.ForegroundColor = ConsoleColor.Red;
-            System.Console.WriteLine ("Usuário ou Senha Inválidas");
-            Console.ResetColor ();
+            Mensagem.MostrarMensagem("Usuário ou Senha Inválidas", TipoMensagemEnum.ERRO);
             return null;
         } //Fim Efetuar Login
         public static void VerSaldo (ModelUsuario usuario) {
-            Mensagem.MostrarMensagem($"Saldo Atual : {usuario.Saldo}", TipoMensagemEnum.DESTAQUE);
+            Mensagem.MostrarMensagem ($"Saldo Atual : {usuario.Saldo}", TipoMensagemEnum.DESTAQUE);
+        }
     }
-}
 }

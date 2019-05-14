@@ -37,6 +37,21 @@ namespace MobTec_Finalizado.Repositorio
                 zip.Save ("banco_de_dados.zip");
             }
         }
+        public List<ModelTransacao> BuscarTransacaoPorUsuario(ModelUsuario usuario){
+            ListaDeTransacoes = Listar();
+            List<ModelTransacao> listaDeTransacoesDoUsuario = new List<ModelTransacao>();
+            foreach (var transacao in ListaDeTransacoes)
+            {
+                
+                if(transacao != null && transacao.IdUsuario == usuario.IdUsuario){
+                    listaDeTransacoesDoUsuario.Add(transacao);
+                    continue;
+                }else{
+                    return null;
+                }
+            }
+            return listaDeTransacoesDoUsuario;
+        }
         public bool GerarRelatorio () {
             if (!File.Exists ("transacoes.csv")) {
                 return false;

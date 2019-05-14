@@ -14,7 +14,6 @@ namespace MobTec_Finalizado {
             bool voltar = false;
             do {
                 int opcaoDeslogado = MenuUtil.MenuDeslogado ();
-
                 switch (opcaoDeslogado) {
                     case 1:
                         ControllerUsuario.CadastrarUsuario ();
@@ -22,7 +21,7 @@ namespace MobTec_Finalizado {
                     case 2:
                         ModelUsuario usuarioRecuperado = ControllerUsuario.EfetuarLogin ();
                         if (usuarioRecuperado != null) {
-                            Mensagem.MostrarMensagem ($"Bem-Vindo {usuarioRecuperado.Nome}\n ", TipoMensagemEnum.SUCESSO);
+                            Mensagem.MostrarMensagem ($"Bem-Vindo, {usuarioRecuperado.Nome}\n ", TipoMensagemEnum.SUCESSO);
                             //Menu Logado (Transações)
                             do {
                                 int opcaoLogado = MenuUtil.MenuLogado ();
@@ -34,7 +33,7 @@ namespace MobTec_Finalizado {
                                         ControllerTransacao.ListarTransacoes (usuarioRecuperado);
                                         break;
                                     case 3:
-                                        ControllerTransacao.ComprimirExtrato ();
+                                        ControllerTransacao.ComprimirExtrato (usuarioRecuperado);
                                         break;
                                     case 4:
                                         ControllerUsuario.VerSaldo (usuarioRecuperado);

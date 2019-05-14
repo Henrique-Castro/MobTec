@@ -55,8 +55,9 @@ namespace MobTec_Finalizado.Controller
             }
             }
         }
-        public static void ComprimirExtrato(){
+        public static void ComprimirExtrato(ModelUsuario usuario){
             RepositorioTransacao repositorio = new RepositorioTransacao();
+            
             repositorio.Comprimir();
             Mensagem.MostrarMensagem("yay", TipoMensagemEnum.SUCESSO);
         }

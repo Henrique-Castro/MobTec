@@ -9,7 +9,7 @@ namespace Mobtec.Util {
             System.Console.WriteLine ("||     2 - Fazer Login               ||");
             System.Console.WriteLine ("||     0 - Sair                      ||");
             System.Console.WriteLine ("=======================================");
-            System.Console.Write ("Digite o número da opçâo : ");
+            System.Console.Write ("Digite o número da opçâo: ");
             return int.Parse (Console.ReadLine ());
         }
 
@@ -23,7 +23,7 @@ namespace Mobtec.Util {
             System.Console.WriteLine ("||     5- Gerar relatório             ||");
             System.Console.WriteLine ("||     0- Voltar                      ||");
             System.Console.WriteLine ("=======================================");
-            System.Console.Write ("Digite o número da opçâo : ");
+            System.Console.Write ("Digite o número da opçâo: ");
             return int.Parse (Console.ReadLine ());
         }
     }
