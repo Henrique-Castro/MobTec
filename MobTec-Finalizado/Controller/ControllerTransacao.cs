@@ -36,18 +36,20 @@ namespace MobTec_Finalizado.Controller
                 }
             } while (!ValidacaoUtil.ValidarPreco (valor));
             ModelTransacao transacao = new ModelTransacao(usuarioLogado.IdUsuario,tipo,descricao,valor);
+            transacao.IdUsuario = usuarioLogado.IdUsuario;
             repositorio.GravarTransacao (transacao);
             Mensagem.MostrarMensagem ("Transação registrada com sucesso.", TipoMensagemEnum.SUCESSO);
         }
         public static void ListarTransacoes(ModelUsuario usuarioLogado){
             RepositorioTransacao repositorio = new RepositorioTransacao();
-            List<ModelTransacao> listaRetornada = repositorio.Listar();
+            List<ModelTransacao> listaRetornada = repositorio.Listar(usuarioLogado);
             if(listaRetornada == null){
                 Mensagem.MostrarMensagem("Não há transações anteriores", TipoMensagemEnum.ALERTA);
             }else{
             foreach (var transacaoRetornada in listaRetornada)
             {
                 System.Console.WriteLine("____________________________");
+                System.Console.WriteLine($"Usuário: {usuarioLogado.Nome}");
                 System.Console.WriteLine($"Tipo: {transacaoRetornada.Tipo}     ");
                 System.Console.WriteLine($"Descrição: {transacaoRetornada.Descricao}     ");
                 System.Console.WriteLine($"Valor: {transacaoRetornada.Valor}     ");
@@ -61,9 +63,9 @@ namespace MobTec_Finalizado.Controller
             repositorio.Comprimir();
             Mensagem.MostrarMensagem("yay", TipoMensagemEnum.SUCESSO);
         }
-        public static void GerarRelatorioTransacoes(){
+        public static void GerarRelatorioTransacoes(ModelUsuario usuario){
             RepositorioTransacao repositorio = new RepositorioTransacao();
-            repositorio.GerarRelatorio();
+            repositorio.GerarRelatorio(usuario);
         }
     }
 }

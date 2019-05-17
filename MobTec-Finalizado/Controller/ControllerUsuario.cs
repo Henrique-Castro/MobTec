@@ -75,6 +75,8 @@ namespace MobTec_Finalizado.Controller {
             } while (!ValidacaoUtil.ValidarSaldo (saldoString, confirmSaldoString, out saldo));
 
             ModelUsuario usuario = new ModelUsuario (nome, email, senha, saldo);
+
+            
             usuarioRepositorio.Inserir (usuario);
 
             Mensagem.MostrarMensagem ("Usuário cadastrado com sucesso.", TipoMensagemEnum.SUCESSO);
@@ -86,7 +88,7 @@ namespace MobTec_Finalizado.Controller {
             do {
                 System.Console.Write ("Digite seu email : ");
                 email = Console.ReadLine ();
-            } while (ValidacaoUtil.ValidadorDeEmail (email));
+            } while (!ValidacaoUtil.ValidadorDeEmail (email));
 
             System.Console.Write ("Digite sua senha : ");
             senha = Console.ReadLine ();

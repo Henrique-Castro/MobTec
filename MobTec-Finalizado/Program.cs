@@ -39,7 +39,7 @@ namespace MobTec_Finalizado {
                                         ControllerUsuario.VerSaldo (usuarioRecuperado);
                                         break;
                                     case 5:
-                                        ControllerTransacao.GerarRelatorioTransacoes ();
+                                        ControllerTransacao.GerarRelatorioTransacoes (usuarioRecuperado);
                                         break;
                                     case 0:
                                         voltar = true;

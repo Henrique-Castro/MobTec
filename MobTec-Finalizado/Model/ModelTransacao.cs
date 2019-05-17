@@ -17,7 +17,7 @@ namespace MobTec_Finalizado.Model
             Valor = valor;
             Data = DateTime.Now;
         }
-        public ModelTransacao(string tipo, string descricao, DateTime data, float valor){
+        public ModelTransacao(int idUsuario, string tipo, string descricao, DateTime data, float valor){
             Tipo = tipo;
             Descricao = descricao;
             Valor = valor;
